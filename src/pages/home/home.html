@@ -1,14 +1,85 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Basic Information
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+<ion-content>
+  <div class="solidBluebg">
+  <h1>Basic Information</h1>
+  <p class="discription">
+    Get Your UniPanda <ion-img src="../assets/icon/favicon.ico"></ion-img>
+
   </p>
+  </div>
+
+  <ion-list class="form-group">
+
+    <ion-item >
+      <ion-label>Name</ion-label>
+      <ion-input placeholder="Text Input"></ion-input>
+      <ion-icon name="ios-arrow-forward" item-right color="light-grey"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        DOB
+      </ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" min="1900-01-01" max="2004-12-31" [(ngModel)]="myDate"></ion-datetime>
+      <ion-input ></ion-input>
+      <ion-icon name="ios-arrow-forward" item-right color="light-grey"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        Gender
+      </ion-label>
+      <ion-select [(ngModel)] = "gender">
+        <ion-option value="f" selected="true">Female</ion-option>
+        <ion-option value="m">Male</ion-option>
+        <ion-option value="o">Other</ion-option>
+      </ion-select>
+      <ion-icon name="ios-arrow-forward" item-right color="light-grey"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        Nationality
+      </ion-label>
+      <ion-select [(ngModel)] = "nationality">
+        <ion-option value="En" selected="true">English</ion-option>
+        <ion-option value="Cn">Chinese</ion-option>
+      </ion-select>
+      <ion-icon name="ios-arrow-forward" item-right color="light-grey"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        Current School
+      </ion-label>
+      <ion-input placeholder="School Name"></ion-input>
+      <ion-icon name="ios-arrow-forward" item-right color="light-grey"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        Current Major
+      </ion-label>
+      <ion-input placeholder="Course Name"></ion-input>
+      <ion-icon name="ios-arrow-forward" item-right color="light-grey"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        Current GPA
+      </ion-label>
+      <ion-input placeholder="Grade" type="number" min="0" max="100"></ion-input>
+      <ion-icon name="ios-arrow-forward" item-right color="light-grey"></ion-icon>
+    </ion-item>
+
+  </ion-list>
+  <button ion-button large (click)="goToAboutYouPage()">Continue</button>
+
 </ion-content>
