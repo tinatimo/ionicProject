@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, Platform } from 'ionic-angular';
+import { File } from 'ionic-native';
+declare var cordova: any;
 
 @Component({
   selector: 'page-home',
@@ -14,8 +16,10 @@ export class HomePage {
    inputSchool: string;
    inputCourse: string;
    inputGPA: number;
-  constructor(public navCtrl: NavController) {
-
+   platform: any;
+   fs: any;
+  constructor(public navCtrl: NavController, platform: Platform) {
+    this.platform = platform
   }
   goToAboutYouPage(){
     var info = {
@@ -27,9 +31,14 @@ export class HomePage {
       "current_major":this.inputCourse,
       "current_gpa":this.inputGPA,
     }
+    if (this.platform.is('core')) { //if this is desktop browser
+      localStorage.setItem('userInfo', JSON.stringify(info));
+    } else { 
+      this.platform.ready().then((readySource) => {
+        File.writeFile(cordova.file.dataDirectory, "userInfo.json", JSON.stringify(info), true)
+      })
 
-    console.log(info);
-
+    }
   }
 
 }
