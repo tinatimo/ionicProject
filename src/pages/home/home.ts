@@ -38,27 +38,22 @@ export class HomePage {
 
   logForm(){
     var info = {
-"name": this.inputName,
-"dob": this.inputDOB,
-"gender": this.inputGender,
-"nationality":this.inputNationality,
-"current_school":this.inputSchool,
-"current_major":this.inputCourse,
-"current_gpa":this.inputGPA,
-};
+    "name": this.inputName,
+    "dob": this.inputDOB,
+    "gender": this.inputGender,
+    "nationality":this.inputNationality,
+    "current_school":this.inputSchool,
+    "current_major":this.inputCourse,
+    "current_gpa":this.inputGPA,
+    };
 
-console.log(this.myForm.value);
-console.log(info);
-
-if (this.platform.is('core')) { //if this is desktop browser
-  localStorage.setItem('userInfo', JSON.stringify(info));
-
-} else {
-  this.platform.ready().then((readySource) => {
-    File.writeFile(cordova.file.dataDirectory, "userInfo.json", JSON.stringify(info), true)
-  })
-
-};
+    if (this.platform.is('core')) { //if this is desktop browser
+      localStorage.setItem('userInfo', JSON.stringify(info));
+    } else {
+      this.platform.ready().then((readySource) => {
+        File.writeFile(cordova.file.dataDirectory, "userInfo.json", JSON.stringify(info), true)
+      });
+    };
   }
 
 
