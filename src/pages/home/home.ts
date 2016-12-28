@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 import { NavController, Platform } from 'ionic-angular';
 import { File } from 'ionic-native';
-import {FormGroup,Validators, FormBuilder } from '@angular/forms';
+import { FormGroup,Validators, FormBuilder } from '@angular/forms';
+import { AboutYouPage} from '../aboutYou/aboutYou';
 
 declare var cordova: any;
 
@@ -54,6 +55,7 @@ export class HomePage {
         File.writeFile(cordova.file.dataDirectory, "userInfo.json", JSON.stringify(info), true)
       });
     };
+    this.navCtrl.push(AboutYouPage);
   }
 
 

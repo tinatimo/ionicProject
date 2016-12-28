@@ -1,0 +1,55 @@
+page-aboutYou {
+  .square-box{
+    border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
+    border: 2px solid #e3e3e3;
+    margin-top:50px;
+  }
+
+  .header{
+    display:none;
+  }
+
+  .list.list-md{
+    padding: 20px;
+  }
+
+  .solidBluebg h1, .discription{
+      text-align: center;
+      background-color: #4286f4;
+      margin: 0px;
+      color: #fff;
+  }
+  .solidBluebg h1{
+    padding-top: 50px;
+  }
+  .discription{
+    padding-top:10px;
+    padding-bottom: 50px;
+    font-size: 16px;
+  }
+  .button {
+    text-align: center;
+    font-size: 20px;
+    padding: 0px 100px;
+    margin:auto;
+    display:block;
+
+    background: #3589f0;
+  background-image: -webkit-linear-gradient(top, #3589f0, #4a8af9);
+  background-image: -moz-linear-gradient(top, #3589f0, #4a8af9);
+  background-image: -ms-linear-gradient(top, #3589f0, #4a8af9);
+  background-image: -o-linear-gradient(top, #3589f0, #4a8af9);
+  background-image: linear-gradient(to bottom, #3589f0, #4a8af9);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 100px 10px 100px;
+  text-decoration: none;
+  }
+
+}

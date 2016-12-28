@@ -3,6 +3,7 @@ import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
+import { AboutYouPage} from '../pages/aboutYou/aboutYou';
 
 
 @Component({
@@ -11,6 +12,8 @@ import { HomePage } from '../pages/home/home';
 export class MyApp {
   rootPage = HomePage;
 
+  pages: Array <{ title: string, component: any}>;
+
   constructor(platform: Platform) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -18,5 +21,11 @@ export class MyApp {
       StatusBar.styleDefault();
       Splashscreen.hide();
     });
+
+
+    this.pages = [
+      {title:'home', component:HomePage},
+      {title:'aboutYou', component:AboutYouPage}
+    ]
   }
 }

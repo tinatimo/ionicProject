@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Tell Us More about you
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="solidBluebg"> <h1>Tell us more about You</h1>
+  <p class="discription">
+ Help us to personalise your assistant
+  </p>
+</div>
+  <ion-list >
+    <ion-item class="square-box">
+    <ion-label>Choose your own label...</ion-label>
+    <ion-textarea></ion-textarea>
+    <pre>{{ list | json }}</pre>
+    </ion-item>
+
+    <ion-item class="square-box">
+    <ion-label>Choose your preferred lifestyle...</ion-label>
+    <ion-textarea></ion-textarea>
+    <pre>{{ list | json }}</pre>
+    </ion-item>
+ </ion-list>
+<button ion-button  (click)="goToAmbassadorPage()">Go</button>
+
+</ion-content>
