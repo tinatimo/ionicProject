@@ -15,11 +15,11 @@
   </p>
   </div>
 
-  <ion-list class="form-group">
-
+  <ion-list class="form-group-list">
+   <form [formGroup]="myForm" (ngSubmit)="logForm()">
     <ion-item >
       <ion-label>Name</ion-label>
-      <ion-input placeholder="Text Input" id="input-name" [(ngModel)]="inputName"></ion-input>
+      <ion-input placeholder="Text Input" [(ngModel)]="inputName" formControlName="inputName" type="text"></ion-input>
       <ion-icon name="ios-arrow-forward" item-right color="light-grey"></ion-icon>
     </ion-item>
 
@@ -27,7 +27,7 @@
       <ion-label>
         DOB
       </ion-label>
-      <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" min="1900-01-01" max="2004-12-31" id="inputDOB" [(ngModel)]="inputDOB" item-right></ion-datetime>
+      <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" min="1900-01-01" max="2004-12-31" [(ngModel)]="inputDOB" formControlName="inputDOB"></ion-datetime>
       <ion-icon name="ios-arrow-forward" item-right color="light-grey"></ion-icon>
     </ion-item>
 
@@ -35,8 +35,8 @@
       <ion-label>
         Gender
       </ion-label>
-      <ion-select [(ngModel)] = "inputGender" id="inputGender">
-        <ion-option value="Female" selected="true">Female</ion-option>
+      <ion-select [(ngModel)]="inputGender" formControlName = "inputGender">
+        <ion-option value="Female" >Female</ion-option>
         <ion-option value="Male">Male</ion-option>
         <ion-option value="Other">Other</ion-option>
       </ion-select>
@@ -47,8 +47,8 @@
       <ion-label>
         Nationality
       </ion-label>
-      <ion-select [(ngModel)] = "inputNationality" id="inputNationality">
-        <ion-option value="English" selected="true">English</ion-option>
+      <ion-select [(ngModel)] = "inputNationality" formControlName = "inputNationality">
+        <ion-option value="English" >English</ion-option>
         <ion-option value="Chinese">Chinese</ion-option>
       </ion-select>
       <ion-icon name="ios-arrow-forward" item-right color="light-grey"></ion-icon>
@@ -58,7 +58,7 @@
       <ion-label>
         Current School
       </ion-label>
-      <ion-input placeholder="School Name" [(ngModel)]="inputSchool"></ion-input>
+      <ion-input placeholder="School Name" [(ngModel)] = "inputSchool" formControlName = "inputSchool"></ion-input>
       <ion-icon name="ios-arrow-forward" item-right color="light-grey"></ion-icon>
     </ion-item>
 
@@ -66,7 +66,7 @@
       <ion-label>
         Current Major
       </ion-label>
-      <ion-input placeholder="Course Name" [(ngModel)]="inputCourse"></ion-input>
+      <ion-input placeholder="Course Name" [(ngModel)] = "inputCourse" formControlName = "inputCourse"></ion-input>
       <ion-icon name="ios-arrow-forward" item-right color="light-grey"></ion-icon>
     </ion-item>
 
@@ -74,11 +74,12 @@
       <ion-label>
         Current GPA
       </ion-label>
-      <ion-input placeholder="Grade" [(ngModel)]="inputGPA" type="number" min="0" max="100"></ion-input>
+      <ion-input placeholder="Grade" type="number" min="0" max="100" [(ngModel)]="inputGPA" formControlName="inputGPA"></ion-input>
       <ion-icon name="ios-arrow-forward" item-right color="light-grey"></ion-icon>
     </ion-item>
 
-  </ion-list>
-  <button ion-button large (click)="goToAboutYouPage()">Continue</button>
 
+  <button ion-button large type="submit" [disabled]="!myForm.valid">Continue</button>
+  </form>
+ </ion-list>
 </ion-content>

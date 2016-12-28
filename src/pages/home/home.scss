@@ -1,5 +1,5 @@
 page-home {
-  .form-group .item {
+  .form-group-list .item {
     border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
@@ -10,7 +10,7 @@ page-home {
     margin-top: 20px;
     input { text-align:right; }
   }
-  .form-group.list.list-md{
+  .form-group-list.list.list-md{
     padding: 20px;
   }
 
@@ -43,8 +43,23 @@ page-home {
   }
   .button {
     text-align: center;
-    margin:auto;
+    font-size: 20px;
+    padding: 0px 100px;
+    margin: 50px auto;
     display:block;
+    background: #4286f4;
+    background-image: -webkit-linear-gradient(top, #4286f4, #4a8af9);
+    background-image: -moz-linear-gradient(top, #4286f4, #4a8af9);
+    background-image: -ms-linear-gradient(top, #4286f4, #4a8af9);
+    background-image: -o-linear-gradient(top, #4286f4, #4a8af9);
+    background-image: linear-gradient(to bottom, #4286f4, #4a8af9);
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    font-family: Arial;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
   }
 
 }
