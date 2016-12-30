@@ -11,7 +11,7 @@ import { AboutYouPage} from '../pages/aboutYou/aboutYou';
 })
 export class MyApp {
   rootPage = HomePage;
-
+  //rootPage = AboutYouPage;
   pages: Array <{ title: string, component: any}>;
 
   constructor(platform: Platform) {
