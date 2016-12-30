@@ -1,0 +1,201 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Tell Us More about you
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="solidBluebg"> <h1>Tell us more about You</h1>
+  <p class="discription">
+ Help us to personalise your assistant
+  </p>
+</div>
+  <ion-list >
+    <div class="square-box" id="personality-box">
+      <span class="intro">Pick a label below that best describes your personality.</span>
+
+      <ion-chip id="remove-outgoing" data-personality="outgoing" (click)="removePersonalityClicked($event)">
+        <ion-icon name="people"  class="no-pointer"></ion-icon>
+        <ion-label class="no-pointer">Out-going</ion-label>
+        <button ion-button clear color="dark" class="no-pointer">
+          <ion-icon name="close-circle" class="no-pointer"></ion-icon>
+        </button>
+      </ion-chip>
+
+      <ion-chip id="remove-reserved" data-personality="reserved" (click)="removePersonalityClicked($event)">
+        <ion-icon name="contact" class="no-pointer"></ion-icon>
+        <ion-label class="no-pointer">Reserved</ion-label>
+        <button ion-button clear color="dark" class="no-pointer">
+          <ion-icon name="close-circle" class="no-pointer"></ion-icon>
+        </button>
+      </ion-chip>
+
+      <ion-chip id="remove-sporty" data-personality="sporty" (click)="removePersonalityClicked($event)">
+        <ion-icon name="football" class="no-pointer"></ion-icon>
+        <ion-label class="no-pointer">Sporty</ion-label>
+        <button ion-button clear color="dark" class="no-pointer">
+          <ion-icon name="close-circle" class="no-pointer"></ion-icon>
+        </button>
+      </ion-chip>
+
+      <ion-chip id="remove-routine" data-personality="routine" (click)="removePersonalityClicked($event)">
+        <ion-icon name="alarm" class="no-pointer"></ion-icon>
+        <ion-label class="no-pointer">Routine</ion-label>
+        <button ion-button clear color="dark" class="no-pointer">
+          <ion-icon name="close-circle" class="no-pointer"></ion-icon>
+        </button>
+      </ion-chip>
+
+      <ion-chip id="remove-flexible" data-personality="flexible" (click)="removePersonalityClicked($event)">
+        <ion-icon name="happy" class="no-pointer"></ion-icon>
+        <ion-label class="no-pointer">Flexible</ion-label>
+        <button ion-button clear color="dark" class="no-pointer">
+          <ion-icon name="close-circle" class="no-pointer"></ion-icon>
+        </button>
+      </ion-chip>
+
+      <ion-chip id="remove-neutral" data-personality="neutral" (click)="removePersonalityClicked($event)">
+        <ion-icon name="bowtie" class="no-pointer"></ion-icon>
+        <ion-label class="no-pointer">Neutral</ion-label>
+        <button ion-button clear color="dark" class="no-pointer">
+          <ion-icon name="close-circle" class="no-pointer"></ion-icon>
+        </button>
+      </ion-chip>
+
+    </div>
+
+    <ion-chip class="chip-active"  id="add-outgoing" data-personality="outgoing" (click)="addPersonalityClicked($event)">
+      <ion-icon name="people" color="dark-grey" class="no-pointer"></ion-icon>
+      <ion-label class="no-pointer" class="no-pointer" >Out-going</ion-label>
+    </ion-chip>
+
+    <ion-chip class="chip-active"  id="add-reserved" data-personality="reserved" (click)="addPersonalityClicked($event)">
+      <ion-icon name="contact" color="dark-grey" class="no-pointer"></ion-icon>
+      <ion-label class="no-pointer">Reserved</ion-label>
+    </ion-chip>
+
+    <ion-chip class="chip-active" id="add-sporty" data-personality="sporty" (click)="addPersonalityClicked($event)">
+      <ion-icon name="football" color="dark-grey" class="no-pointer"></ion-icon>
+      <ion-label class="no-pointer">Sporty</ion-label>
+    </ion-chip>
+
+    <ion-chip class="chip-active" id="add-routine" data-personality="routine" (click)="addPersonalityClicked($event)">
+      <ion-icon name="alarm" color="dark-grey" class="no-pointer"></ion-icon>
+      <ion-label class="no-pointer">Routine</ion-label>
+    </ion-chip>
+
+    <ion-chip class="chip-active" id="add-flexible" data-personality="flexible" (click)="addPersonalityClicked($event)">
+      <ion-icon name="happy" color="dark-grey" class="no-pointer"></ion-icon>
+      <ion-label class="no-pointer">Flexible</ion-label>
+    </ion-chip>
+
+    <ion-chip class="chip-active" id="add-neutral" data-personality="neutral" (click)="addPersonalityClicked($event)">
+      <ion-icon name="bowtie" color="dark-grey" class="no-pointer"></ion-icon>
+      <ion-label class="no-pointer">Neutral</ion-label>
+    </ion-chip>
+
+
+
+
+    <div class="square-box" id="lifestyle-box">
+      <span class="intro">Pick a label below that best describes your lifestyle.</span>
+
+      <ion-chip id="remove-lifestyle-neutral" data-lifestyle="neutral" (click)="removelifestyleClicked($event)">
+        <ion-icon name="bowtie"  class="no-pointer"></ion-icon>
+        <ion-label class="no-pointer">Neutral</ion-label>
+        <button ion-button clear color="dark" class="no-pointer">
+          <ion-icon name="close-circle" class="no-pointer"></ion-icon>
+        </button>
+      </ion-chip>
+
+      <ion-chip id="remove-lifestyle-fast" data-lifestyle="fast" (click)="removelifestyleClicked($event)">
+        <ion-icon name="jet" class="no-pointer"></ion-icon>
+        <ion-label class="no-pointer">Fast</ion-label>
+        <button ion-button clear color="dark" class="no-pointer">
+          <ion-icon name="close-circle" class="no-pointer"></ion-icon>
+        </button>
+      </ion-chip>
+
+      <ion-chip id="remove-lifestyle-party" data-lifestyle="party" (click)="removelifestyleClicked($event)">
+        <ion-icon name="beer" class="no-pointer"></ion-icon>
+        <ion-label class="no-pointer">Party</ion-label>
+        <button ion-button clear color="dark" class="no-pointer">
+          <ion-icon name="close-circle" class="no-pointer"></ion-icon>
+        </button>
+      </ion-chip>
+
+      <ion-chip id="remove-lifestyle-quiet" data-lifestyle="quiet" (click)="removelifestyleClicked($event)">
+        <ion-icon name="book" class="no-pointer"></ion-icon>
+        <ion-label class="no-pointer">Quiet</ion-label>
+        <button ion-button clear color="dark" class="no-pointer">
+          <ion-icon name="close-circle" class="no-pointer"></ion-icon>
+        </button>
+      </ion-chip>
+
+      <ion-chip id="remove-lifestyle-posh" data-lifestyle="posh" (click)="removelifestyleClicked($event)">
+        <ion-icon name="wine" class="no-pointer"></ion-icon>
+        <ion-label class="no-pointer">Posh</ion-label>
+        <button ion-button clear color="dark" class="no-pointer">
+          <ion-icon name="close-circle" class="no-pointer"></ion-icon>
+        </button>
+      </ion-chip>
+
+      <ion-chip id="remove-lifestyle-budget" data-lifestyle="budget" (click)="removelifestyleClicked($event)">
+        <ion-icon name="cash" class="no-pointer"></ion-icon>
+        <ion-label class="no-pointer">Budget</ion-label>
+        <button ion-button clear color="dark" class="no-pointer">
+          <ion-icon name="close-circle" class="no-pointer"></ion-icon>
+        </button>
+      </ion-chip>
+    </div>
+
+    <ion-chip class="chip-active" id="add-lifestyle-neutral" data-lifestyle="neutral" (click)="addLifestyleClicked($event)">
+      <ion-icon name="bowtie" color="dark-grey"  class="no-pointer"></ion-icon>
+      <ion-label class="no-pointer">Neutral</ion-label>
+
+    </ion-chip>
+
+    <ion-chip class="chip-active" id="add-lifestyle-fast" data-lifestyle="fast" (click)="addLifestyleClicked($event)">
+      <ion-icon name="jet" color="dark-grey" class="no-pointer"></ion-icon>
+      <ion-label class="no-pointer">Fast</ion-label>
+
+    </ion-chip>
+
+    <ion-chip class="chip-active" id="add-lifestyle-party" data-lifestyle="party" (click)="addLifestyleClicked($event)">
+      <ion-icon name="beer" color="dark-grey" class="no-pointer"></ion-icon>
+      <ion-label class="no-pointer">Party</ion-label>
+
+    </ion-chip>
+
+    <ion-chip class="chip-active" id="add-lifestyle-quiet" data-lifestyle="quiet" (click)="addLifestyleClicked($event)">
+      <ion-icon name="book" color="dark-grey" class="no-pointer"></ion-icon>
+      <ion-label class="no-pointer">Quiet</ion-label>
+
+    </ion-chip>
+
+    <ion-chip class="chip-active" id="add-lifestyle-posh" data-lifestyle="posh" (click)="addLifestyleClicked($event)">
+      <ion-icon name="wine" color="dark-grey" class="no-pointer"></ion-icon>
+      <ion-label class="no-pointer">Posh</ion-label>
+
+    </ion-chip>
+
+    <ion-chip class="chip-active" id="add-lifestyle-budget" data-lifestyle="budget" (click)="addLifestyleClicked($event)">
+      <ion-icon name="cash" color="dark-grey"  class="no-pointer"></ion-icon>
+      <ion-label class="no-pointer">Budget</ion-label>
+
+    </ion-chip>
+
+
+  </ion-list>
+
+   <button class="button-go" ion-button  (click)="goToAmbassadorPage()">Go</button>
+
+
+   <br/>
+
+
+
+
+</ion-content>
