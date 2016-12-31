@@ -42,6 +42,10 @@ export class HomePage {
     var self = this;
     File.writeFile(cordova.file.dataDirectory, "userInfo.json", JSON.stringify(self.info))
       .then(function (success) {
+        console.log('json file written to:')
+        console.log(cordova.file.dataDirectory)
+        console.log('with content:')
+        console.log(success)
         self.navCtrl.push(AboutYouPage);
       }, function (error) {
         console.log('error writeJsonFile...')
