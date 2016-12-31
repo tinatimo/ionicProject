@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar>
+
+    <ion-title>
+      Ambassador
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="headerContainer">
+    <ion-list>
+        <ion-item-divider class="headerTop">
+          <h1>Ambassador</h1>
+          <ion-img class="panda" src="../assets/icon/panda2.png" item-right></ion-img>
+        </ion-item-divider>
+
+
+      <div class="bgimage">
+          <ion-item>
+            <ion-icon color="danger" ios="ios-heart" md="md-heart" item-right></ion-icon>
+          </ion-item>
+
+          <ion-item>
+            <h1>University of Glasgow</h1>
+            <h2>United Kingdom, Scotland</h2>
+          </ion-item>
+
+          <ion-row class="ranking-row" text-center>
+              <p><span>62</span> Global Ranking</p>
+              <p><span>26 </span> National Ranking</p>
+          </ion-row>
+
+        </div>
+
+    </ion-list>
+  </div>
+
+
+  <ion-card *ngFor="let ambassador of ambassadors">
+     <ion-item detail-push>
+       <ion-avatar item-left>
+         <ion-img class="panda-avatar" src="../assets/icon/panda.png"></ion-img>
+       </ion-avatar>
+       <h2>{{ambassador.name}}</h2>
+       <p><span class="line">{{ambassador.nationality}} {{ambassador.year_of_study}} {{ambassador.level_of_study}} {{ambassador.subject}}</span></p>
+       <ion-icon name="ios-arrow-forward" item-right color="light-grey"></ion-icon>
+
+     </ion-item>
+     <div class="bottomline"></div>
+     <ion-item>
+          <button ion-button ion icon-left clear small text-capitalize>
+          <ion-icon ios="ios-card" md="md-card"></ion-icon>
+          <a href="mailto:{{ambassador.contact}}">
+          Contact</a>
+          </button>
+          <button ion-button icon clear small item-right>
+             <ion-icon ios="ios-heart" md="md-heart" ></ion-icon>
+             {{ambassador.hearts}}
+          </button>
+      </ion-item>
+  </ion-card>
+
+
+</ion-content>
+<ion-footer>
+  <ion-grid>
+  <ion-row>
+
+    <ion-col width-20 text-center><ion-icon ios="ios-trophy" md="md-trophy" color="light-grey"><span>Unihome</span></ion-icon></ion-col>
+
+    <ion-col width-20 text-center><ion-icon ios="ios-clipboard" md="md-clipboard" color="light-grey"><span>Tasks</span></ion-icon></ion-col>
+
+    <ion-col width-20 text-center><ion-icon ios="ios-home" md="md-home" color="primary"><span>Schools</span></ion-icon></ion-col>
+
+    <ion-col width-20 text-center><ion-icon ios="ios-bulb" md="md-bulb" color="light-grey"><span>Discover</span></ion-icon></ion-col>
+
+    <ion-col width-20 text-center><ion-icon ios="ios-person" md="md-person" color="light-grey"><span>Me</span></ion-icon></ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+
+
+
+</ion-footer>

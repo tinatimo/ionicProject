@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
 import { File } from 'ionic-native';
 declare var cordova: any;
+import { AmbassadorPage } from '../ambassador/ambassador';
 
 @Component({
   selector: 'page-aboutYou',
@@ -98,6 +99,8 @@ export class AboutYouPage {
           console.log(JSON.stringify(error));
         });
     };
+
+    this.navCtrl.push(AmbassadorPage);
   }
 
 
