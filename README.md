@@ -1,6 +1,6 @@
 # :wave: Hello ICAN Future Star team  !
 
-This is my technical test for building the app using ionic framework. I'm new to Ionic and this is my first project on building Ionic, I learn alot thru out this week from reading their docs and tutorials.
+This is my technical test for building the app using ionic framework. I'm new to Ionic and Angularjs, this is my first project on building an app with Ionic, I learn alot thru out this week from reading their docs and tutorials.
 I have built this app to run in web browsers and also ios devices, For web browsers it saves the users information on to the browser's localstorage.
 For ios devices it will save it as a file onto the devices using codova's file plugin.
 
