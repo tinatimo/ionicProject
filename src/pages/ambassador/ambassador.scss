@@ -183,4 +183,52 @@ page-ambassador {
     background-color: white;
   }
 
+  .ios & {
+    .list-ios .item-block .item-inner {
+      border-bottom: none;
+    }
+    .item-ios {
+      padding-left: 0px;
+      .line {
+        display: block;
+        white-space: normal;
+      }
+    }
+
+    .bgimage ion-icon {
+      font-size: 30px;
+    }
+    .panda {
+      width: 30px;
+      height: 30px;
+    }
+    .ion-ios-heart:before {
+      margin-left: 2px;
+      margin-right: 5px;
+    }
+    .footer-ios {
+      border-top: 2px solid lightgrey;
+
+      ion-grid {
+        padding: 0px;
+      }
+    }
+    ion-footer ion-icon span {
+      font-size: 10px;
+    }
+    ion-avatar[item-left] {
+      zoom: 2;
+      margin: 0;
+    }
+    .card-ios {
+      .label-ios {
+        margin: 11px 8px 11px 8px;
+      }
+    }
+    .headerContainer {
+      .label-ios {
+        margin: 11px 8px 11px 8px;
+      }
+    }
+  }
 }

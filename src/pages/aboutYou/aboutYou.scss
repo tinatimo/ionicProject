@@ -79,4 +79,14 @@ ion-chip {
     margin-left: 9px;
   }
 
+  .list-ios{
+    padding: 0 10px;
+  }
+
+  .ion-ios-wine {
+    &:before {
+        margin-left: 13px;
+    }
+  }
+
 }
