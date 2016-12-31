@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Olivia Feng",
+        "nationality": "China",
+        "year_of_study": "Graduated",
+        "level_of_study": "PhD",
+        "subject": "Behaviour Accounting",
+        "contact": "olivia@icanplay.co.uk",
+        "hearts": 2338
+    },
+    {
+        "name": "Jeet Agarwal",
+        "nationality": "British",
+        "year_of_study": "Second year",
+        "level_of_study": "undergraduate",
+        "subject": "Economics",
+        "contact": "jeet@icanplay.co.uk",
+        "hearts": 2338
+    },
+    {
+        "name": "Ann-Sophia Korb",
+        "nationality": "British",
+        "year_of_study": "Postgraduate",
+        "level_of_study": null,
+        "subject": "Chemistry",
+        "contact": "ann-sophia@icanplay.co.uk",
+        "hearts": 2338
+    }
+]

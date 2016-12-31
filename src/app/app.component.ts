@@ -4,6 +4,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
 import { AboutYouPage} from '../pages/aboutYou/aboutYou';
+import { AmbassadorPage } from '../pages/ambassador/ambassador';
 
 
 @Component({
@@ -12,6 +13,7 @@ import { AboutYouPage} from '../pages/aboutYou/aboutYou';
 export class MyApp {
   rootPage = HomePage;
   //rootPage = AboutYouPage;
+  //rootPage = AmbassadorPage;
   pages: Array <{ title: string, component: any}>;
 
   constructor(platform: Platform) {
@@ -25,7 +27,8 @@ export class MyApp {
 
     this.pages = [
       {title:'home', component:HomePage},
-      {title:'aboutYou', component:AboutYouPage}
+      {title:'aboutYou', component:AboutYouPage},
+      {title:'ambassador', component:AmbassadorPage}
     ]
   }
 }

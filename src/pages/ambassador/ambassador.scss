@@ -1,0 +1,234 @@
+page-ambassador {
+  /* Defined header ----------- */
+  .header{
+    display:none;
+  }
+
+  .headerTop{
+    background-color: #4286f4;
+    margin: 0;
+    color: white;
+    padding-top: 30px;
+  }
+
+  /* Defined initial body margin ----------- */
+
+  body{
+    margin: auto;
+    min-width: 320px;
+  }
+
+  h1,.headerContainer, .fix-content, .scroll-content, ion-list.list.list-md, ion-item.item.item-block.item-md, ion-item.item.item-block.item-md.item-inner, .input-wrapper{
+    margin: 0px;
+    padding: 0px;
+  }
+
+  h1{
+      text-align: center;
+    }
+  .item-divider-md{
+    border:none;
+  }
+
+  /* Defined image banner ----------- */
+  .bgimage {
+    background-image:url("http://www.gla.ac.uk/media/media_298723_en.jpg");
+    background-size: cover;
+    text-align: center;
+    color: white;
+
+    h2{
+      text-align: center;
+    }
+
+    ion-icon {
+      text-shadow: none;
+      font-size: 40px;
+    }
+
+    ion-item, ion-item span p{
+      background-color: transparent;
+      color: white;
+      font-weight: 600;
+    }
+    .item-md.item-block .item-inner{
+      border:none;
+    }
+  }
+
+  .ranking-row {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: none;
+    font-weight: normal;
+    margin: 0 auto;
+
+    p {
+      color: white;
+      width: 110px;
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+
+    span{
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+  }
+  /* Defined ion-card----------- */
+  ion-card{
+  p{
+    display: block;
+    word-break: keep-all;
+    word-spacing: 30px;
+  }
+    ion-avatar ion-icon{
+      font-size: 100px;
+      width:100px;
+      padding-left: 10px;
+      text-align: center;
+
+    }
+
+  }
+  ion-card.card.card-md{
+    margin: 20px;
+    width: calc(100% - 40px);
+    font-size: 20px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 2px solid #e6e2e2;
+
+    -webkit-box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.29);
+    -moz-box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.29);
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.29);
+
+    ion-icon.ion-md-card{
+       font-size:35px;
+       padding:10px 20px;
+       color:grey;
+     }
+     ion-icon.ion-md-heart{
+
+       font-size:20px;
+       padding:5px;
+       color: red;
+
+    }
+     @media screen and (min-width: 400px){
+    span.line{
+      float: left;
+      margin: 5px;
+      white-space: normal;
+
+    }
+  }
+
+  }
+
+  .bottomline{
+  border-bottom: 2px solid lightgrey;
+  }
+
+  button.button{
+    padding:0px 0px;
+    margin: 0px;
+    font-size: 14px;
+    display: inline-table;
+
+  }
+
+  .button-clear-md{
+   color:grey;
+  }
+  .label.label-md{
+    margin:0px;
+  }
+
+  /* Defined footer ----------- */
+  ion-footer{
+  ion-icon{
+    display: inline-block;
+    font-size: 3em;
+    text-align: center;
+    span{
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+  }
+  }
+
+  .panda {
+    margin-left:10px;
+    vertical-align:middle;
+    background: #4286f4;
+
+  }
+  .item-md ion-avatar ion-img, .item-md ion-avatar img, .item-md ion-avatar img .panda-avatar{
+    height: 100px;
+    width:100px;
+
+  }
+  .button-clear-md:hover:not(.disable-hover){
+    background-color: white;
+  }
+
+  .ios & {
+    .list-ios .item-block .item-inner {
+      border-bottom: none;
+    }
+    .item-ios {
+      padding-left: 0px;
+      .line {
+        display: block;
+        white-space: normal;
+      }
+    }
+
+    .bgimage ion-icon {
+      font-size: 30px;
+    }
+    .panda {
+      width: 30px;
+      height: 30px;
+    }
+    .ion-ios-heart:before {
+      margin-left: 2px;
+      margin-right: 5px;
+    }
+    .footer-ios {
+      border-top: 2px solid lightgrey;
+
+      ion-grid {
+        padding: 0px;
+      }
+    }
+    ion-footer ion-icon span {
+      font-size: 10px;
+    }
+    ion-avatar[item-left] {
+      zoom: 2;
+      margin: 0;
+    }
+    .card-ios {
+      .label-ios {
+        margin: 11px 8px 11px 8px;
+      }
+    }
+    .headerContainer {
+      .label-ios {
+        margin: 11px 8px 11px 8px;
+      }
+    }
+  }
+}
